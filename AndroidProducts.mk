@@ -14,4 +14,4 @@
 # limitations under the License.
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/viper_whyred.mk
+    $(LOCAL_DIR)/cerberus_whyred.mk
