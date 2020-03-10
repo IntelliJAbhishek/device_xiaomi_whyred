@@ -63,7 +63,7 @@ BOARD_KERNEL_IMAGE_NAME := Image.gz-dtb
 TARGET_KERNEL_ARCH := arm64
 TARGET_KERNEL_HEADER_ARCH := arm64
 TARGET_KERNEL_SOURCE := kernel/xiaomi/whyred
-TARGET_KERNEL_CONFIG := whyred-perf_defconfig
+TARGET_KERNEL_CONFIG := whyred-defconfig
 TARGET_KERNEL_CLANG_COMPILE := true
 
 # QCOM
@@ -200,6 +200,8 @@ include device/qcom/sepolicy-legacy-um/sepolicy.mk
 BOARD_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
 BOARD_PLAT_PUBLIC_SEPOLICY_DIR += $(DEVICE_PATH)/sepolicy/public
 BOARD_PLAT_PRIVATE_SEPOLICY_DIR += $(DEVICE_PATH)/sepolicy/private
+SELINUX_IGNORE_NEVERALLOWS := true
+TARGET_EXCLUDE_QCOM_SEPOLICY := true
 
 # Treble
 BOARD_VNDK_RUNTIME_DISABLE := true
